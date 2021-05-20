@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Imatge de fons amb icona -->
+    <header>
+        <img src="/images/logo.png" alt="Logotipo Zulo" id="icon">
+        <span id="brand">Zulo</span>
+        <span id="eslogan">Trust in technology</span>
+        <span class="button">Start shopping</span>
+    </header>
+    <div class="section">
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+        <div class="card">
+            <div class="card-front">Zulo</div>
+            <div class="card-back">Coop</div>
+        </div>
+    </div>
+    <div class="techinfo">
+        <div class="article">
+            <h1>Lotus Evija</h1>
+            <img src="/images/fotos-lotus-evija.jpg" alt="">
+        </div>
+        <div class="article">
+            <h1>Aston Martin Vulcan</h1>
+            <img src="/images/amvulcan.jpg" alt="">
+        </div>
+        <div class="article">
+            <h1>Ferrari FXXK</h1>
+            <img src="/images/2015_Ferrari_FXX-K_in_Shanghai.png" alt="">
+        </div>
+        <div class="article">
+            <h1>McLaren P1 GTR</h1>
+            <img src="/images/573215-mclaren-p1-gtr.jpg" alt="">
+        </div>
+        <div class="article">
+            <h1>SSC Tuatara</h1>
+            <img src="/images/ssc-tuatara-record-blog-premium-eventosmotor.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        const observador = new IntersectionObserver(elementos =>
+            elementos.forEach(elemento => { if (elemento.isIntersecting) elemento.target.classList.add("animada") })
+        );
+        document.querySelectorAll(".article").forEach(article => observador.observe(article));
+    </script>
+    <div class="section_bomb">
+        <div class="center">
+            BDM
+        </div>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-mercedes-amg-project-one.jpg" class="howdy v1">Mercedes AMG Project ONE</a>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-shelby-cobra-trasera.jpg" class="howdy v2">Shelby Cobra</a>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-pagani-zonda.jpg" class="howdy v3">Pagani Zonda</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207069_165136172_1280x1706.jpg" class="howdy v4">LaFerrari</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207078_165136421_1706x1280.jpg" class="howdy v5">P1</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207083_165136561_1706x1280.jpg" class="howdy v6">Mercedes Maybach</a>
+    </div>
+    
+    <div class="section_bomb">
+        <div class="center">
+            BDM
+        </div>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-mercedes-amg-project-one.jpg"
+            class="howdy v1">Mercedes AMG Project ONE</a>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-shelby-cobra-trasera.jpg"
+            class="howdy v2">Shelby Cobra</a>
+        <a href="https://www.holycarstv.com/wp-content/uploads/2020/04/lewis-hamilton-pagani-zonda.jpg" class="howdy v3">Pagani
+            Zonda</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207069_165136172_1280x1706.jpg"
+            class="howdy v4">LaFerrari</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207078_165136421_1706x1280.jpg" class="howdy v5">P1</a>
+        <a href="https://s1.eestatic.com/2020/11/15/motor/motor_536207083_165136561_1706x1280.jpg" class="howdy v6">Mercedes
+            Maybach</a>
+    </div>
+    <script>
+        document.querySelectorAll(".section_bomb").forEach(seccion => {
+            seccion.onclick = () => {
+                seccion.querySelectorAll(".howdy").forEach(howdy => {
+                    howdy.classList.add("animated");
+                })
+            };
+        });
+    </script>
+
+</body>
+</html>

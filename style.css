@@ -1,0 +1,243 @@
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+header {
+  background-image: url(/images/pexels-photo-370717.jpeg);
+  background-size: cover;
+  height: 85vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: 0.8s header ease-in;
+}
+
+@keyframes header {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+span {
+  font-family: "Montserrat", sans-serif;
+}
+figure {
+  width: 100%;
+  height: 100%;
+}
+#icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  animation: place 1.8s linear;
+  backface-visibility: hidden;
+}
+@keyframes place {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.1);
+  }
+  25% {
+    opacity: 0.2;
+    transform: translateY(-75px) scale(0.25);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50px) scale(0.5);
+  }
+
+  75% {
+    transform: translateY(-25px) scale(0.75);
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#brand {
+  animation: brand 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes brand {
+  0% {
+    transform: translateX(-50vw);
+  }
+  50% {
+  }
+  100% {
+  }
+}
+#eslogan {
+  animation: eslogan 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes eslogan {
+  0% {
+    transform: translateX(50vw);
+  }
+  50% {
+  }
+  100% {
+  }
+}
+.button {
+  background-color: rgb(63, 63, 172);
+  color: white;
+  padding: 0.3em;
+  margin-top: 10px;
+  animation: button 1.8s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes button {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+  }
+  /* Filpping Card Animation */
+}
+.section {
+  display: flex;
+  align-content: center;
+  justify-content: space-around, center;
+  gap: 10px;
+  margin: 0px;
+  background-image: linear-gradient(
+    -55deg,
+    rgba(50, 45, 55, 1) 0%,
+    rgba(101, 96, 106, 1) 100%
+  );
+  padding: 10px;
+}
+.card {
+  width: 100px;
+  height: 150px;
+  display: grid;
+  perspective: 800px;
+}
+.card-back {
+  background-color: teal;
+  transform: rotateY(-180deg);
+}
+.card-front {
+  background-color: steelblue;
+}
+
+.card-front,
+.card-back {
+  grid-area: 1/1/1/1;
+  backface-visibility: hidden;
+  height: 100%;
+  transition: transform 1.5s;
+}
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+/* Scroll Animation */
+.techinfo {
+  background-image: linear-gradient(
+    -55deg,
+    rgba(50, 45, 55, 1) 0%,
+    rgba(101, 96, 106, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  place-items: center;
+  padding: 10px;
+}
+h1 {
+  font-family: "Zen Dots", cursive;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+.techinfo img {
+  place-items: center;
+  width: 400px;
+}
+.article {
+  transform: translate(-100%);
+  transition: transform 1s;
+}
+
+.article:nth-child(even) {
+  transform: translate(100%);
+}
+
+.article.animada {
+  transform: translate(0);
+}
+/* Bomb Animation */
+.section_bomb {
+  margin: 30px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.center {
+  grid-area: 1/1/1/1;
+  background-image: linear-gradient(
+    -60deg,
+    rgba(185, 252, 215, 1) 0%,
+    rgba(10, 189, 100, 1) 100%
+  );
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.section_bomb a {
+  grid-area: 1/1/1/1;
+  text-align: center;
+}
+.howdy {
+  background: url(/images/Lewis-Hamilton-2020-170x255.jpg);
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 1s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+.v1.animated {
+  transform: translate(350px, -150px);
+}
+.v2.animated {
+  transform: translate(-350px, -150px);
+}
+.v3.animated {
+  transform: translate(400px);
+}
+.v4.animated {
+  transform: translate(-400px);
+}
+.v5.animated {
+  transform: translate(350px, 150px);
+}
+.v6.animated {
+  transform: translate(-350px, 150px);
+}
